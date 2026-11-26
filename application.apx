@@ -1,8 +1,8 @@
-app IBS-APP (
-    name: IBS_APP
+app IBS-SOCIAL-INSURANCE (
+    name: ibs_social_insurance
     logo {
         type: text
-        text: IBS_APP
+        text: ibs_social_insurance
     }
     navigation {
         homeUrl: {
@@ -40,7 +40,7 @@ app IBS-APP (
         scheme: @oracle-apex-accounts
     }
     sessionStateProtection {
-        checksumSalt: 78CB006B6BBBF530F1BC40E8DCEF152E0175A584F31682B7A2089521BBD21C27
+        checksumSalt: 12558EA003D9DD37D5CB5E4D251406A666567A8DBB519C3858B4ED850B884258
     }
     runtime {
         allowFeedback: true
@@ -48,7 +48,7 @@ app IBS-APP (
 
     substitution APP_NAME (
         value {
-            staticValue: IBS_APP
+            staticValue: ibs_social_insurance
         }
     )
 

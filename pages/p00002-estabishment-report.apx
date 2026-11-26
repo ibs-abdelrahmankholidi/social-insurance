@@ -1,0 +1,261 @@
+page 2 (
+    name: estabishment report
+    alias: ESTABISHMENT-REPORT
+    title: estabishment report
+    appearance {
+        pageTemplate: @/standard
+        templateOptions: #DEFAULT#
+    }
+    navigation {
+        cursorFocus: doNotFocusCursor
+    }
+    security {
+        pageAccessProtection: argumentsMustHaveChecksum
+        formAutoComplete: false
+    }
+
+    region breadcrumb (
+        name: Breadcrumb
+        type: breadcrumb
+        source {
+            breadcrumb: @breadcrumb
+        }
+        layout {
+            sequence: 10
+            slot: breadcrumbBar
+        }
+        appearance {
+            template: @/title-bar
+            templateOptions: [
+                #DEFAULT#
+                t-BreadcrumbRegion--useBreadcrumbTitle
+            ]
+        }
+        componentAppearance {
+            breadcrumbTemplate: @/breadcrumb
+            templateOptions: #DEFAULT#
+        }
+    )
+
+    region estabishment-report (
+        name: estabishment report
+        type: classicReport
+        source {
+            location: sampleData
+            sampleData: employees
+        }
+        layout {
+            sequence: 10
+            slot: body
+        }
+        appearance {
+            template: @/standard
+            templateOptions: [
+                #DEFAULT#
+                t-Region--noPadding
+                t-Region--scrollBody
+            ]
+        }
+        componentAppearance {
+            template: @/standard
+            templateOptions: [
+                #DEFAULT#
+                t-Report--stretch
+                t-Report--staticRowColors
+                t-Report--rowHighlight
+                t-Report--inline
+                t-Report--hideNoPagination
+            ]
+        }
+        messages {
+            whenNoDataFound: No data found.
+        }
+        printing {
+            enabled: true
+        }
+        output {
+            linkText: Download
+            format: pdf
+        }
+        page {
+            borderWidth: 0.5
+            borderColor: #666666
+        }
+
+        column AVATAR_IMAGE (
+            reportColumnQueryId: 13
+            derivedColumn: N
+            heading {
+                heading: Avatar Image
+            }
+            layout {
+                sequence: 13
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+        column DEPARTMENT (
+            reportColumnQueryId: 6
+            derivedColumn: N
+            heading {
+                heading: Department
+            }
+            layout {
+                sequence: 6
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+        column EMAIL (
+            reportColumnQueryId: 3
+            derivedColumn: N
+            heading {
+                heading: Email
+            }
+            layout {
+                sequence: 3
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+        column ID (
+            reportColumnQueryId: 1
+            derivedColumn: N
+            type: hidden
+            layout {
+                sequence: 1
+            }
+        )
+
+        column INITIALS (
+            reportColumnQueryId: 9
+            derivedColumn: N
+            heading {
+                heading: Initials
+            }
+            layout {
+                sequence: 9
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+        column JOB (
+            reportColumnQueryId: 4
+            derivedColumn: N
+            heading {
+                heading: Job
+            }
+            layout {
+                sequence: 4
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+        column LATITUDE (
+            reportColumnQueryId: 12
+            derivedColumn: N
+            heading {
+                heading: Latitude
+                alignment: end
+            }
+            layout {
+                sequence: 12
+                columnAlignment: end
+            }
+        )
+
+        column LONGITUDE (
+            reportColumnQueryId: 11
+            derivedColumn: N
+            heading {
+                heading: Longitude
+                alignment: end
+            }
+            layout {
+                sequence: 11
+                columnAlignment: end
+            }
+        )
+
+        column MANAGERNO (
+            reportColumnQueryId: 10
+            derivedColumn: N
+            heading {
+                heading: Managerno
+                alignment: end
+            }
+            layout {
+                sequence: 10
+                columnAlignment: end
+            }
+        )
+
+        column NAME (
+            reportColumnQueryId: 2
+            derivedColumn: N
+            heading {
+                heading: Name
+            }
+            layout {
+                sequence: 2
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+        column SALARY (
+            reportColumnQueryId: 5
+            derivedColumn: N
+            heading {
+                heading: Salary
+                alignment: end
+            }
+            layout {
+                sequence: 5
+                columnAlignment: end
+            }
+        )
+
+        column TIME_ZONE (
+            reportColumnQueryId: 7
+            derivedColumn: N
+            heading {
+                heading: Time Zone
+            }
+            layout {
+                sequence: 7
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+        column WORK_MODE (
+            reportColumnQueryId: 8
+            derivedColumn: N
+            heading {
+                heading: Work Mode
+            }
+            layout {
+                sequence: 8
+            }
+            sorting {
+                defaultSequence: 1
+            }
+        )
+
+    )
+
+)
+

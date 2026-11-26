@@ -62,21 +62,21 @@ list navigation-bar (
 list navigation-menu (
     name: Navigation Menu
 
-    entry form1 (
-        label: FORM1
+    entry estabishment-report (
+        label: estabishment report
         icon {
-            imageIconCssClasses: fa-forms
+            imageIconCssClasses: fa-table
         }
         layout {
             sequence: 20
         }
         isCurrent {
             type: pages
-            pages: 4
+            pages: 2
         }
         link {
             target: {
-                page: 4
+                page: 2
             }
         }
     )
